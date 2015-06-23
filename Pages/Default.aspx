@@ -6,7 +6,6 @@
 
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <meta name="WebPartPageExpansion" content="full" />
-    <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
@@ -14,7 +13,4 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-    <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
-    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
-    <script type="text/javascript" src="../Scripts/App.js"></script>
 </asp:Content>

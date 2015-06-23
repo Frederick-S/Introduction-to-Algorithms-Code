@@ -43,7 +43,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Content Include="Scripts\site-lists.js" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{229c8fa3-c283-4431-9a86-6f243f34ec6a}</SharePointProjectItemId>
     </None>
@@ -51,16 +51,11 @@
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{cd7615ac-943f-437a-865b-d5731270ab28}</SharePointProjectItemId>
     </None>
+    <Content Include="Pages\SiteLists.aspx" />
     <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\SharePointProjectItem.spdata">
@@ -85,11 +80,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\Feature\Feature.feature">
       <FeatureId>{f5955949-643d-42f8-877c-c760e93f8a9b}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\Feature\Feature.Template.xml">
+      <DependentUpon>Feature.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
