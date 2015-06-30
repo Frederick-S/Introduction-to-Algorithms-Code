@@ -1,7 +1,8 @@
 ﻿var app = angular.module('siteListsApp', []);
 
-app.service('queryLists', function () {
-    return function (siteUrl, success, error) {
+app.service('queryLists', ['$q', function ($q) {
+    return function (siteUrl) {
+        var deferred = $q.defer();
         var clientContext = SP.ClientContext.get_current();
         var appContextSite = new SP.AppContextSite(clientContext, siteUrl);
         var web = appContextSite.get_web();
@@ -16,21 +17,23 @@ app.service('queryLists', function () {
                 listsArray.push(enumerator.get_current());
             }
 
-            success(listsArray);
+            deferred.resolve(listsArray);
         }, function (sender, args) {
             var message = args.get_message();
 
-            error(message);
+            deferred.reject(message);
         });
+
+        return deferred.promise;
     };
-});
+}]);
 
 app.controller('mainController', function ($scope, queryLists) {
     $scope.siteUrl = '';
     $scope.lists = [];
 
     $scope.queryLists = function () {
-        queryLists($scope.siteUrl, function (lists) {
+        queryLists($scope.siteUrl).then(function (lists) {
             $scope.lists = lists;
             $scope.$apply();
         }, function (error) {
