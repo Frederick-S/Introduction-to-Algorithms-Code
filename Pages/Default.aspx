@@ -13,4 +13,7 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
+    <ul>
+        <li><a href="SiteLists.aspx">Display all lists in a web</a></li>
+    </ul>
 </asp:Content>

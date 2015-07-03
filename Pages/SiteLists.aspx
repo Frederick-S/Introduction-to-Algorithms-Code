@@ -11,7 +11,7 @@
     <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full" />
     <div ng-app="siteListsApp" ng-controller="mainController">
         <div class="UserSectionHead">
-            Site Url (Host site and its sub sites)
+            Site Url (Host web and its sub webs)
         </div>
         <div class="UserSectionBody">
             <div class="UserControlGroup">
