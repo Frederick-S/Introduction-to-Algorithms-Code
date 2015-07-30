@@ -4,7 +4,7 @@ def merge_sort(numbers):
 
 def merge_sort_internal(numbers, auxiliary, low, high):
     if low < high:
-        middle = (low + high) / 2
+        middle = (low + high) // 2
 
         merge_sort_internal(numbers, auxiliary, low, middle)
         merge_sort_internal(numbers, auxiliary, middle + 1, high)
@@ -13,10 +13,10 @@ def merge_sort_internal(numbers, auxiliary, low, high):
 def merge(numbers, auxiliary, low, middle, high):
     for k in range(low, high + 1):
         auxiliary[k] = numbers[k]
-    
+
     i = low
     j = middle + 1
-    
+
     for k in range(low, high + 1):
         if i > middle:
             numbers[k] = auxiliary[j]
