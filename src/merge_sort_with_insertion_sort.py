@@ -1,9 +1,9 @@
 def merge_sort_with_insertion_sort(numbers):
     cutoff = 3
     auxiliary = numbers[:]
-    merge_sort_internal(numbers, auxiliary, 0, len(numbers) - 1, cutoff)
+    merge_sort(numbers, auxiliary, 0, len(numbers) - 1, cutoff)
 
-def merge_sort_internal(numbers, auxiliary, low, high, cutoff):
+def merge_sort(numbers, auxiliary, low, high, cutoff):
     if low < high:
         if low + cutoff >= high:
             insertion_sort(numbers, low, high)
@@ -12,8 +12,8 @@ def merge_sort_internal(numbers, auxiliary, low, high, cutoff):
 
         middle = (low + high) // 2
 
-        merge_sort_internal(numbers, auxiliary, low, middle, cutoff)
-        merge_sort_internal(numbers, auxiliary, middle + 1, high, cutoff)
+        merge_sort(numbers, auxiliary, low, middle, cutoff)
+        merge_sort(numbers, auxiliary, middle + 1, high, cutoff)
         merge(numbers, auxiliary, low, middle, high)
 
 def merge(numbers, auxiliary, low, middle, high):
