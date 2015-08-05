@@ -42,7 +42,7 @@ def insertion_sort(numbers, low, high):
         j = i - 1
         key = numbers[i]
 
-        while j >= 0 and numbers[j] > key:
+        while j >= low and numbers[j] > key:
             numbers[j + 1] = numbers[j]
             j -= 1
 
