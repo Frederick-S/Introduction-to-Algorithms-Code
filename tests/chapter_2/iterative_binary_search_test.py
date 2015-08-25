@@ -1,5 +1,5 @@
 import unittest
-from src.iterative_binary_search import iterative_binary_search
+from src.chapter_2.iterative_binary_search import iterative_binary_search
 
 class TestIterativeBinarySearch(unittest.TestCase):
     def test_iterative_binary_search(self):
