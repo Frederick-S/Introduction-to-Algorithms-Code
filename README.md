@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/Frederick-S/Algorithms.svg)](https://travis-ci.org/Frederick-S/Algorithms) [![Coverage Status](https://coveralls.io/repos/Frederick-S/Algorithms/badge.svg?branch=master&service=github)](https://coveralls.io/github/Frederick-S/Algorithms?branch=master)
+[![Build Status](https://travis-ci.org/Frederick-S/Introduction-to-Algorithms-Code.svg?branch=master)](https://travis-ci.org/Frederick-S/Introduction-to-Algorithms-Code)
