@@ -4,8 +4,9 @@ python:
   - 3.2
   - 3.3
   - 3.4
+  - 3.5
 install:
-  - pip install coveralls
+  - pip install coveralls<4
 script:
   coverage run --source=src setup.py test
 after_success:
