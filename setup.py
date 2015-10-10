@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name = 'algorithms',
+    name = 'Introduction-to-Algorithms-Code',
     version = '0.1',
-    description='Algorithms',
+    description='Code of Introduction to Algorithms',
     test_suite="tests"
 )
