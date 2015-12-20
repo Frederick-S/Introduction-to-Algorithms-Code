@@ -1,6 +1,7 @@
 import unittest
 from src.chapter_2.recursive_insertion_sort import recursive_insertion_sort
 
+
 class TestRecursiveInsertionSort(unittest.TestCase):
     def test_recursive_insertion_sort(self):
         numbers = []

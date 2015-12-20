@@ -1,5 +1,8 @@
 import unittest
-from src.chapter_2.merge_sort_with_insertion_sort import merge_sort_with_insertion_sort
+from src.chapter_2.merge_sort_with_insertion_sort import (
+    merge_sort_with_insertion_sort
+)
+
 
 class TestMergeSortWithInsertionSort(unittest.TestCase):
     def test_merge_sort_with_insertion_sort(self):

@@ -3,6 +3,7 @@ def merge_sort_with_insertion_sort(numbers):
     auxiliary = numbers[:]
     merge_sort(numbers, auxiliary, 0, len(numbers) - 1, cutoff)
 
+
 def merge_sort(numbers, auxiliary, low, high, cutoff):
     if low < high:
         if low + cutoff >= high:
@@ -15,6 +16,7 @@ def merge_sort(numbers, auxiliary, low, high, cutoff):
         merge_sort(numbers, auxiliary, low, middle, cutoff)
         merge_sort(numbers, auxiliary, middle + 1, high, cutoff)
         merge(numbers, auxiliary, low, middle, high)
+
 
 def merge(numbers, auxiliary, low, middle, high):
     for k in range(low, high + 1):
@@ -36,6 +38,7 @@ def merge(numbers, auxiliary, low, middle, high):
         else:
             numbers[k] = auxiliary[j]
             j += 1
+
 
 def insertion_sort(numbers, low, high):
     for i in range(low, high + 1):

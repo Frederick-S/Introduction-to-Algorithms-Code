@@ -4,6 +4,7 @@ def number_of_inversions(numbers):
 
     return inversions
 
+
 def merge_sort(numbers, auxiliary, low, high):
     inversions = 0
 
@@ -15,6 +16,7 @@ def merge_sort(numbers, auxiliary, low, high):
         inversions += merge(numbers, auxiliary, low, middle, high)
 
     return inversions
+
 
 def merge(numbers, auxiliary, low, middle, high):
     for k in range(low, high + 1):

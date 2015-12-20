@@ -1,6 +1,7 @@
 import unittest
 from src.chapter_2.number_of_inversions import number_of_inversions
 
+
 class TestNumberOfInversions(unittest.TestCase):
     def test_number_of_inversions(self):
         numbers = []

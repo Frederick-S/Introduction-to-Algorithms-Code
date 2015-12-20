@@ -1,5 +1,7 @@
 def recursive_binary_search(numbers, target):
-    return recursive_binary_search_internal(numbers, target, 0, len(numbers) - 1)
+    return recursive_binary_search_internal(numbers, target,
+                                            0, len(numbers) - 1)
+
 
 def recursive_binary_search_internal(numbers, target, low, high):
     if low <= high:
@@ -7,9 +9,11 @@ def recursive_binary_search_internal(numbers, target, low, high):
         middle_value = numbers[middle]
 
         if middle_value < target:
-            return recursive_binary_search_internal(numbers, target, middle + 1, high)
+            return recursive_binary_search_internal(numbers, target,
+                                                    middle + 1, high)
         elif middle_value > target:
-            return recursive_binary_search_internal(numbers, target, low, middle - 1)
+            return recursive_binary_search_internal(numbers, target,
+                                                    low, middle - 1)
         else:
             return True
 

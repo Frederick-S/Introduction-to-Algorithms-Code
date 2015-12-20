@@ -1,6 +1,7 @@
 import unittest
 from src.chapter_2.bubble_sort import bubble_sort
 
+
 class TestBubbleSort(unittest.TestCase):
     def test_bubble_sort(self):
         numbers = []

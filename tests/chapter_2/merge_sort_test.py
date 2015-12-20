@@ -1,6 +1,7 @@
 import unittest
 from src.chapter_2.merge_sort import merge_sort
 
+
 class TestMergeSort(unittest.TestCase):
     def test_merge_sort(self):
         numbers = []

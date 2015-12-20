@@ -1,6 +1,7 @@
 import unittest
 from src.chapter_2.selection_sort import selection_sort
 
+
 class TestSelectionSort(unittest.TestCase):
     def test_selection_sort(self):
         numbers = []
