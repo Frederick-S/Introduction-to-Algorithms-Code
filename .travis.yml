@@ -6,7 +6,9 @@ python:
   - 3.5
 install:
   - pip install coveralls
+  - pip install pep8
 script:
-  coverage run --source=src setup.py test
+  - pep8 .
+  - coverage run --source=src setup.py test
 after_success:
   coveralls
