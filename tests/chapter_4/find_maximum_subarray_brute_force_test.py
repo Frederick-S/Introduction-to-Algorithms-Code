@@ -1,5 +1,5 @@
 import unittest
-from sys import maxint
+import math
 from src.chapter_4.find_maximum_subarray_brute_force \
     import find_maximum_subarray_brute_force
 
@@ -8,7 +8,7 @@ class TestMaxiumSubarrayBruteForce(unittest.TestCase):
     def test_maximum_subarray_brute_force(self):
         numbers = []
         self.assertSequenceEqual(
-            (-1, -1, -maxint - 1),
+            (-1, -1, -float('inf')),
             find_maximum_subarray_brute_force(numbers, 0, len(numbers) - 1))
 
         numbers = [1, 2, 3, 4, 5]

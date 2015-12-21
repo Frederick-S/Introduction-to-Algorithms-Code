@@ -1,10 +1,7 @@
-from sys import maxint
-
-
 def find_maximum_subarray_brute_force(numbers, low, high):
     start = -1
     end = -1
-    max_sum = -maxint - 1
+    max_sum = -float('inf')
 
     for i in range(low, high + 1):
         current_sum = 0

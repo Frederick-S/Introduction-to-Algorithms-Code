@@ -1,5 +1,5 @@
 import unittest
-from sys import maxint
+import math
 from src.chapter_4.find_maximum_subarray_divide_and_conquer \
     import find_maximum_subarray_divide_and_conquer
 
@@ -8,7 +8,7 @@ class TestMaxiumSubarrayDivideAndConquer(unittest.TestCase):
     def test_maximum_subarray_divide_and_conquer(self):
         numbers = []
         self.assertSequenceEqual(
-            (-1, -1, -maxint - 1),
+            (-1, -1, -float('inf')),
             find_maximum_subarray_divide_and_conquer(
                 numbers, 0, len(numbers) - 1))
 

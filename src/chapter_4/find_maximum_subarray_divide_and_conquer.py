@@ -1,9 +1,6 @@
-from sys import maxint
-
-
 def find_maximum_subarray_divide_and_conquer(numbers, low, high):
     if len(numbers) == 0:
-        return (-1, -1, -maxint - 1)
+        return (-1, -1, -float('inf'))
     elif low == high:
         return (low, high, numbers[low])
     else:
@@ -30,8 +27,8 @@ def find_max_crossing_subarray(numbers, low, middle, high):
     start = middle
     end = middle
     current_sum = 0
-    left_sum = -maxint - 1
-    right_sum = -maxint - 1
+    left_sum = -float('inf')
+    right_sum = -float('inf')
 
     for i in range(middle, low - 1, -1):
         current_sum += numbers[i]
