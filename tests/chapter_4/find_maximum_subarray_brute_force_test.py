@@ -1,5 +1,4 @@
 import unittest
-import math
 from src.chapter_4.find_maximum_subarray_brute_force \
     import find_maximum_subarray_brute_force
 
