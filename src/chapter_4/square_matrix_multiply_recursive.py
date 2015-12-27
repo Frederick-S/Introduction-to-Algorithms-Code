@@ -59,14 +59,3 @@ def add(a, b):
             c[i][j] = a[i][j] + b[i][j]
 
     return c
-
-
-def subtract(a, b):
-    n = len(a)
-    c = [[0] * n for i in range(n)]
-
-    for i in range(n):
-        for j in range(n):
-            c[i][j] = a[i][j] - b[i][j]
-
-    return c
