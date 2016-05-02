@@ -4,11 +4,11 @@ def square_matrix_multiply(a, b):
 
     for i in range(n):
         for j in range(n):
-            c_ij = 0
+            value = 0
 
             for k in range(n):
-                c_ij += a[i][k] * b[k][j]
+                value += a[i][k] * b[k][j]
 
-            c[i][j] = c_ij
+            c[i][j] = value
 
     return c
