@@ -19,5 +19,9 @@ class TestPriorityQueue(unittest.TestCase):
         self.assertEqual(100, priority_queue.maximum())
         self.assertEqual(12, priority_queue.heap_size)
 
+        priority_queue.delete(0)
+        self.assertEqual(20, priority_queue.maximum())
+        self.assertEqual(11, priority_queue.heap_size)
+
 if __name__ == '__main__':
     unittest.main()
