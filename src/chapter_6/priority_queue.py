@@ -11,7 +11,12 @@ class PriorityQueue():
 
     def insert(self, key):
         self.heap_size += 1
-        self.elements.append(-sys.maxsize)
+
+        if len(self.elements) < self.heap_size:
+            self.elements.append(-sys.maxsize)
+        else:
+            self.elements[self.heap_size - 1] = -sys.maxsize
+
         self.increase_key(self.heap_size - 1, key)
 
     def delete(self, i):
@@ -51,4 +56,4 @@ class PriorityQueue():
         self.elements[i] = key
 
     def is_empty(self):
-        return len(self.elements) == 0
+        return self.heap_size == 0
