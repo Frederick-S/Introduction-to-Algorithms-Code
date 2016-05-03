@@ -1,5 +1,4 @@
 import sys
-from .heap_sort import max_heapify, build_max_heap
 
 
 class DAryHeap():
@@ -29,7 +28,7 @@ class DAryHeap():
         self.elements[i] = self.elements[self.heap_size - 1]
         self.heap_size -= 1
 
-        max_heapify(self.elements, i, self.heap_size)
+        self.max_heapify(i)
 
     def maximum(self):
         assert not self.is_empty()
@@ -43,7 +42,7 @@ class DAryHeap():
         self.elements[0] = self.elements[self.heap_size - 1]
         self.heap_size -= 1
 
-        max_heapify(self.elements, 0, self.heap_size)
+        self.max_heapify(0)
 
         return maximum
 
