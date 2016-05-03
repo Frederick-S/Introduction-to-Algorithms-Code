@@ -10,6 +10,27 @@ def young_tableau_extract_min(matrix):
     return smallest
 
 
+def youngify(matrix, row, column):
+    smallest_row = row
+    smallest_column = column
+    max_row = len(matrix)
+    max_column = len(matrix[0])
+
+    if row + 1 < max_row and matrix[row + 1][column] < matrix[row][column]:
+        smallest_row = row + 1
+
+    if (column + 1 < max_column and
+            matrix[row][column + 1] < matrix[smallest_row][smallest_column]):
+        smallest_row = row
+        smallest_column = column + 1
+
+    if smallest_row != row or smallest_column != column:
+        matrix[row][column], matrix[smallest_row][smallest_column] = \
+            matrix[smallest_row][smallest_column], matrix[row][column]
+
+        youngify(matrix, smallest_row, smallest_column)
+
+
 def young_tableau_insert(matrix, value):
     max_row = len(matrix)
     max_column = len(matrix[0])
@@ -53,24 +74,3 @@ def young_tableau_find(matrix, value):
             column += 1
 
     return False
-
-
-def youngify(matrix, row, column):
-    smallest_row = row
-    smallest_column = column
-    max_row = len(matrix)
-    max_column = len(matrix[0])
-
-    if row + 1 < max_row and matrix[row + 1][column] < matrix[row][column]:
-        smallest_row = row + 1
-
-    if (column + 1 < max_column and
-            matrix[row][column + 1] < matrix[smallest_row][smallest_column]):
-        smallest_row = row
-        smallest_column = column + 1
-
-    if smallest_row != row or smallest_column != column:
-        matrix[row][column], matrix[smallest_row][smallest_column] = \
-            matrix[smallest_row][smallest_column], matrix[row][column]
-
-        youngify(matrix, smallest_row, smallest_column)
