@@ -7,7 +7,7 @@ def hybrid_quick_sort(numbers, k):
 
 
 def quick_sort_internal(numbers, p, r, k):
-    if p < r and r - p + 1 < k:
+    if p < r and r - p + 1 > k:
         q = partition(numbers, p, r)
 
         quick_sort_internal(numbers, p, q - 1, k)
