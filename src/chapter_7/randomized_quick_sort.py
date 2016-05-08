@@ -1,4 +1,5 @@
 from random import randint
+from .quick_sort import partition
 
 
 def randomized_quick_sort(numbers):
@@ -18,17 +19,3 @@ def randomized_partition(numbers, p, r):
     numbers[i], numbers[r] = numbers[r], numbers[i]
 
     return partition(numbers, p, r)
-
-
-def partition(numbers, p, r):
-    x = numbers[r]
-    i = p - 1
-
-    for j in range(p, r):
-        if numbers[j] <= x:
-            i += 1
-            numbers[i], numbers[j] = numbers[j], numbers[i]
-
-    numbers[i + 1], numbers[r] = numbers[r], numbers[i + 1]
-
-    return i + 1
