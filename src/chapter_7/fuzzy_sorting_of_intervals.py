@@ -33,7 +33,7 @@ def partition(intervals, p, r):
 
             if t != j:
                 intervals[j], intervals[i] = intervals[i], intervals[j]
-        elif overlaped(intervals[j], x):
+        elif overlap(intervals[j], x):
             t += 1
             intervals[t], intervals[j] = intervals[j], intervals[t]
 
@@ -42,7 +42,7 @@ def partition(intervals, p, r):
     return i + 1, t + 1
 
 
-def overlaped(a, b):
+def overlap(a, b):
     return a[0] <= b[1] and b[0] <= a[1]
 
 
