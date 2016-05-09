@@ -1,5 +1,4 @@
 import unittest
-from random import randint
 from src.chapter_7.three_way_partition_quick_sort import \
     three_way_partition_quick_sort
 
