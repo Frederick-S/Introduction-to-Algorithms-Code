@@ -2,7 +2,7 @@ def counting_sort(numbers):
     length = len(numbers)
 
     if length == 0:
-        return []
+        return numbers
 
     k = max(numbers)
     c = [0] * (k + 1)
