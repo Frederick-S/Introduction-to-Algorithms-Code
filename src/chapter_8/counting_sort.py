@@ -8,7 +8,7 @@ def counting_sort(numbers):
     c = [0] * (k + 1)
     b = [0] * length
 
-    for i in range(0, length):
+    for i in range(length):
         c[numbers[i]] += 1
 
     for i in range(1, k + 1):
