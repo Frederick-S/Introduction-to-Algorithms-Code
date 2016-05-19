@@ -1,6 +1,3 @@
-import math
-
-
 def k_sorted_array(numbers, k):
     length = len(numbers)
 
