@@ -13,5 +13,8 @@ class TestSecondSmallestElement(unittest.TestCase):
         numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         self.assertEqual(1, second_smallest_element(numbers))
 
+        numbers = [31, 41, 59, 26, 41, 58]
+        self.assertEqual(31, second_smallest_element(numbers))
+
 if __name__ == '__main__':
     unittest.main()

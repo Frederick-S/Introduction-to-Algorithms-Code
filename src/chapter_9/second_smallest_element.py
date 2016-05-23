@@ -1,13 +1,10 @@
 import sys
 
 
-minimum = -sys.maxsize
-
-
 def second_smallest_element(numbers):
     assert len(numbers) >= 2
 
-    node = second_smallest_element_internal(numbers, 0, len(numbers) - 1)
+    node = minify(numbers, 0, len(numbers) - 1)
 
     second_smallest = 0
 
@@ -33,12 +30,12 @@ def second_smallest_element(numbers):
     return second_smallest
 
 
-def second_smallest_element_internal(numbers, low, high):
+def minify(numbers, low, high):
     if low < high:
         middle = (low + high) // 2
 
-        left = second_smallest_element_internal(numbers, low, middle)
-        right = second_smallest_element_internal(numbers, middle + 1, high)
+        left = minify(numbers, low, middle)
+        right = minify(numbers, middle + 1, high)
 
         node = None
 
