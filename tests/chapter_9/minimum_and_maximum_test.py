@@ -10,7 +10,7 @@ class TestMinimumAndMaximum(unittest.TestCase):
         numbers = [1]
         self.assertSequenceEqual([1, 1], minimum_and_maximum(numbers))
 
-        numbers = [2, 3]
+        numbers = [3, 2]
         self.assertSequenceEqual([2, 3], minimum_and_maximum(numbers))
 
         numbers = [2, 5, 3, 0, 2, 3, 0, 3]
