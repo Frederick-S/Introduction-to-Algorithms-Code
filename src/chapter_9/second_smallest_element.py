@@ -1,6 +1,3 @@
-import sys
-
-
 def second_smallest_element(numbers):
     assert len(numbers) >= 2
 
