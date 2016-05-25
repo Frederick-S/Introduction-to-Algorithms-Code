@@ -73,9 +73,6 @@ def get_median_index(length):
 
 
 def insertion_sort(numbers, start, end):
-    if start >= len(numbers) - 1 or end >= len(numbers) - 1:
-        return
-
     for i in range(start + 1, end + 1):
         j = i - 1
         key = numbers[i]
