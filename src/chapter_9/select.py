@@ -24,14 +24,7 @@ def select_internal(numbers, p, r, i):
 
 
 def partition(numbers, p, r, pivot):
-    pivot_index = p
-
-    for i in range(p, r + 1):
-        if pivot == numbers[i]:
-            pivot_index = i
-
-            break
-
+    pivot_index = numbers.index(pivot, p)
     numbers[pivot_index], numbers[r] = numbers[r], numbers[pivot_index]
 
     i = p - 1
