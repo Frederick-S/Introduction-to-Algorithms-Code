@@ -24,19 +24,20 @@ def select_internal(numbers, p, r, i):
 
 
 def partition(numbers, p, r, pivot):
-    pivot_index = numbers.index(pivot, p)
-    numbers[pivot_index], numbers[r] = numbers[r], numbers[pivot_index]
+    i = p
+    j = r
 
-    i = p - 1
-
-    for j in range(p, r):
-        if numbers[j] <= pivot:
+    while i < j:
+        while numbers[i] < pivot:
             i += 1
+
+        while numbers[j] > pivot:
+            j -= 1
+
+        if i < j:
             numbers[i], numbers[j] = numbers[j], numbers[i]
 
-    numbers[i + 1], numbers[r] = numbers[r], numbers[i + 1]
-
-    return i + 1
+    return i
 
 
 def find_median_recursively(numbers, p, r):
