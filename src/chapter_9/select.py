@@ -4,19 +4,21 @@ k = 5
 def select(numbers, i):
     assert i <= len(numbers)
 
-    return select_internal(numbers, 0, len(numbers) - 1, i)
+    index, value = select_internal(numbers, 0, len(numbers) - 1, i)
+
+    return value
 
 
 def select_internal(numbers, p, r, i):
     if p == r:
-        return numbers[p]
+        return p, numbers[p]
 
     median = find_median_recursively(numbers, p, r)
     q = partition(numbers, p, r, median)
     k = q - p + 1
 
     if i == k:
-        return numbers[q]
+        return q, numbers[q]
     elif i < k:
         return select_internal(numbers, p, q - 1, i)
     else:
