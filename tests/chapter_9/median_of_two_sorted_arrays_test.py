@@ -18,6 +18,10 @@ class TestMedianOfTwoSortedArrays(unittest.TestCase):
         y = [i for i in range(101, 201)]
         self.assertEqual(100, median_of_two_sorted_arrays(x, y))
 
+        x = [i for i in range(101, 201)]
+        y = [i for i in range(1, 101)]
+        self.assertEqual(100, median_of_two_sorted_arrays(x, y))
+
         x = [random.randint(1, 1000) for i in range(1001)]
         x.sort()
         y = [random.randint(1, 1000) for i in range(1001)]
