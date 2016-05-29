@@ -11,6 +11,10 @@ class TestSelect(unittest.TestCase):
         numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1]
         self.assertEqual(8, select(numbers, 8))
 
+        numbers = [i for i in range(1, 21)]
+        random.shuffle(numbers)
+        self.assertEqual(16, select(numbers, 16))
+
         numbers = [i for i in range(1, 101)]
         random.shuffle(numbers)
         self.assertEqual(41, select(numbers, 41))

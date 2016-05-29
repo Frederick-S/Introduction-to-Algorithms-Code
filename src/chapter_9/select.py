@@ -25,17 +25,25 @@ def select_internal(numbers, p, r, i):
 
 def partition(numbers, p, r, pivot):
     i = p
+    t = p
     j = r
 
     while i < j:
         while numbers[i] < pivot:
             i += 1
+            t += 1
+
+        while numbers[t] == pivot:
+            t += 1
 
         while numbers[j] > pivot:
             j -= 1
 
         if i < j:
-            numbers[i], numbers[j] = numbers[j], numbers[i]
+            numbers[i], numbers[t] = numbers[t], numbers[i]
+
+            if t != j:
+                numbers[i], numbers[j] = numbers[j], numbers[i]
 
     return i
 
