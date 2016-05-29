@@ -2,25 +2,25 @@ import math
 from .select import select
 
 
-def k_closet(numbers, k):
+def k_closest(numbers, k):
     length = len(numbers)
     i = math.ceil(length / 2)
 
     median = select(numbers, i)
     b = [abs(numbers[j] - median) for j in range(length)]
 
-    closet = []
+    closest = []
     kth_smallest = select(b, k)
 
     for j in range(length):
         if abs(numbers[j] - median) < kth_smallest:
-            closet.append(numbers[j])
+            closest.append(numbers[j])
 
     for j in range(length):
         if abs(numbers[j] - median) == kth_smallest:
-            closet.append(numbers[j])
+            closest.append(numbers[j])
 
-        if len(closet) >= k:
+        if len(closest) >= k:
             break
 
-    return closet
+    return closest
