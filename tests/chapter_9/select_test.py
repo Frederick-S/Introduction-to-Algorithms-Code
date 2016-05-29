@@ -5,6 +5,9 @@ from src.chapter_9.select import select
 
 class TestSelect(unittest.TestCase):
     def test_select(self):
+        numbers = [1, 1, 0, 0, 0]
+        self.assertEqual(0, select(numbers, 3))
+
         numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         self.assertEqual(5, select(numbers, 5))
 

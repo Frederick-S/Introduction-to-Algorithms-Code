@@ -35,11 +35,14 @@ def partition(numbers, p, r, pivot):
             i += 1
             t += 1
 
-        while numbers[t] == pivot:
+        while t <= r and numbers[t] == pivot:
             t += 1
 
         while numbers[j] > pivot:
             j -= 1
+
+        if t > r:
+            break
 
         if i < j:
             numbers[i], numbers[t] = numbers[t], numbers[i]
