@@ -10,6 +10,10 @@ class TestMedianOfTwoSortedArrays(unittest.TestCase):
         y = [6, 7, 8, 9, 10]
         self.assertEqual(5, median_of_two_sorted_arrays(x, y))
 
+        x = [6, 7, 8, 9, 10]
+        y = [1, 2, 3, 4, 5]
+        self.assertEqual(5, median_of_two_sorted_arrays(x, y))
+
         x = [i for i in range(1, 101)]
         y = [i for i in range(101, 201)]
         self.assertEqual(100, median_of_two_sorted_arrays(x, y))
