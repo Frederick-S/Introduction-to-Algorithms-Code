@@ -15,6 +15,11 @@ class TestKCloset(unittest.TestCase):
         closet.sort()
         self.assertSequenceEqual([4, 5, 6], closet)
 
+        numbers = [1, 2, 4, 8, 16, 32, 64, 128]
+        closet = k_closet(numbers, 4)
+        closet.sort()
+        self.assertSequenceEqual([1, 2, 4, 8], closet)
+
         numbers = [i for i in range(1, 21)]
         random.shuffle(numbers)
         closet = k_closet(numbers, 10)
