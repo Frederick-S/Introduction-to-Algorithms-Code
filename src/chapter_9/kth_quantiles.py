@@ -27,5 +27,5 @@ def kth_quantiles_internal(numbers, p, r, k, size_of_each_quantile, quantiles):
         kth_quantiles_internal(
             numbers, p, index, median_of_k, size_of_each_quantile, quantiles)
         kth_quantiles_internal(
-            numbers, index + 1, r, k - median_of_k, 
+            numbers, index + 1, r, k - median_of_k,
             size_of_each_quantile, quantiles)
