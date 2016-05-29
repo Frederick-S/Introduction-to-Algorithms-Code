@@ -16,15 +16,11 @@ def k_closet(numbers, k):
         if abs(numbers[j] - median) < kth_smallest:
             closet.append(numbers[j])
 
+    for j in range(length):
+        if abs(numbers[j] - median) == kth_smallest:
+            closet.append(numbers[j])
+
         if len(closet) >= k:
             break
-
-    if len(closet) != k:
-        for j in range(length):
-            if abs(numbers[j] - median) == kth_smallest:
-                closet.append(numbers[j])
-
-            if len(closet) >= k:
-                break
 
     return closet
