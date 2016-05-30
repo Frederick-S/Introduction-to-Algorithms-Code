@@ -7,6 +7,10 @@ from src.chapter_9.median_of_two_sorted_arrays \
 class TestMedianOfTwoSortedArrays(unittest.TestCase):
     def test_median_of_two_sorted_arrays(self):
         x = [1, 2, 3, 4, 5]
+        y = [1, 2, 3, 4, 5]
+        self.assertEqual(3, median_of_two_sorted_arrays(x, y))
+
+        x = [1, 2, 3, 4, 5]
         y = [6, 7, 8, 9, 10]
         self.assertEqual(5, median_of_two_sorted_arrays(x, y))
 
