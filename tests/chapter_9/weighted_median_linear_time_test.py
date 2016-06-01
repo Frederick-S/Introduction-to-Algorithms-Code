@@ -7,6 +7,16 @@ from src.chapter_9.weighted_median_linear_time \
 
 class TestWeightedMedianLinearTime(unittest.TestCase):
     def test_weighted_median_linear_time(self):
+        values = [1]
+        weights = [1]
+        elements = create_elements(values, weights)
+        self.assertEqual(1, weighted_median_linear_time(elements).get('value'))
+
+        values = [1, 2, 3]
+        weights = [0.8, 0.1, 0.1]
+        elements = create_elements(values, weights)
+        self.assertEqual(1, weighted_median_linear_time(elements).get('value'))
+
         values = [1, 2, 3, 4, 5, 6, 7]
         weights = [0.1, 0.35, 0.1, 0.05, 0.15, 0.05, 0.2]
         elements = create_elements(values, weights)
