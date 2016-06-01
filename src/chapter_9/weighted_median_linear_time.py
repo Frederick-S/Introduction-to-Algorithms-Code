@@ -25,7 +25,7 @@ def weighted_median_linear_time(elements):
 
         if left_weights < 0.5 and right_weights <= 0.5:
             return median
-        elif left_weights > 0.5:
+        elif left_weights >= 0.5:
             median['weight'] += right_weights
 
             return weighted_median_linear_time(
