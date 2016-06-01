@@ -1,9 +1,6 @@
 import math
 
 
-epsilon = 0.001
-
-
 def weighted_median_linear_time(elements):
     length = len(elements)
 
