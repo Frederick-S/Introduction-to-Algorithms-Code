@@ -1,7 +1,7 @@
 import sys
 
 
-class DAryHeap():
+class DAryHeap(object):
     def __init__(self, d, elements):
         assert d >= 2
 

@@ -23,14 +23,14 @@ def merge_sorted_lists(lists):
     return sorted_list
 
 
-class MinHeapElement():
+class MinHeapElement(object):
     def __init__(self, list_index, next_index, value):
         self.list_index = list_index
         self.next_index = next_index
         self.value = value
 
 
-class MinHeap():
+class MinHeap(object):
     def __init__(self, elements):
         self.elements = elements
         self.heap_size = len(elements)

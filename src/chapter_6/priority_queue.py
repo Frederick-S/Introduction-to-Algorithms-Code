@@ -2,7 +2,7 @@ import sys
 from .heap_sort import max_heapify, build_max_heap
 
 
-class PriorityQueue():
+class PriorityQueue(object):
     def __init__(self, elements):
         self.elements = elements
         self.heap_size = len(elements)

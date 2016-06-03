@@ -1,4 +1,4 @@
-class IntegerQuery:
+class IntegerQuery(object):
     def __init__(self, numbers):
         assert len(numbers) > 0
 

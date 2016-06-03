@@ -1,6 +1,3 @@
-import math
-
-
 def median_of_two_sorted_arrays(x, y):
     return median_of_two_sorted_arrays_internal(
         x, 0, len(x) - 1, y, 0, len(y) - 1)

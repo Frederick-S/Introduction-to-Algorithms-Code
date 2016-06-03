@@ -51,7 +51,7 @@ def minify(numbers, low, high):
         return Node(numbers[low])
 
 
-class Node:
+class Node(object):
     def __init__(self, value):
         self.left = None
         self.right = None
