@@ -6,7 +6,7 @@ def i_largest_by_max_priority_queue(numbers, i):
 
     result = []
 
-    for j in range(i):
+    for _ in range(i):
         result = [priority_queue.extract_max()] + result
 
     return result

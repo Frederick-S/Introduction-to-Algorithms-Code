@@ -15,7 +15,7 @@ def random_number(a, b):
 def random_binay(bits):
     number = 0
 
-    for i in range(bits):
+    for _ in range(bits):
         number = number * 2 + random.randint(0, 1)
 
     return number
