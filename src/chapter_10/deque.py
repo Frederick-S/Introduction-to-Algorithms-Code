@@ -26,6 +26,9 @@ class Deque(object):
         if self.is_empty():
             raise Exception('Underflow')
 
+        if self.right == self.size:
+            self.right = 0
+
         x = self.elements[self.right]
 
         if self.left == self.right:
