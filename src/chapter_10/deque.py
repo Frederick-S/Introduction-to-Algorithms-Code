@@ -15,10 +15,10 @@ class Deque(object):
         if self.is_full():
             raise Exception('Overflow')
 
+        self.right -= 1
+
         if self.right == -1:
             self.right = self.size - 1
-        else:
-            self.right -= 1
 
         self.elements[self.right] = x
 
@@ -40,10 +40,10 @@ class Deque(object):
         if self.is_full():
             raise Exception('Overflow')
 
+        self.left += 1
+
         if self.left == self.size:
             self.left = 0
-        else:
-            self.left += 1
 
         self.elements[self.left] = x
 

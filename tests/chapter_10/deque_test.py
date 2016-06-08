@@ -33,5 +33,16 @@ class TestDeque(unittest.TestCase):
         self.assertEqual(3, deque.pop())
         self.assertRaises(Exception, deque.pop)
 
+        deque.append(1)
+        deque.append(2)
+        deque.append(3)
+        deque.append_left(4)
+        deque.append_left(5)
+        deque.pop()
+        deque.pop()
+        deque.pop()
+        deque.append(1)
+        self.assertEqual(1, deque.pop())
+
 if __name__ == '__main__':
     unittest.main()
