@@ -20,7 +20,7 @@ class Deque(object):
         self.elements[self.right] = x
 
         if self.right == -1:
-            self.right == self.size - 1
+            self.right = self.size - 1
 
     def pop(self):
         if self.is_empty():
