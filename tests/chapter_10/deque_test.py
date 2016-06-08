@@ -55,5 +55,9 @@ class TestDeque(unittest.TestCase):
         deque.append_left(6)
         self.assertEqual(6, deque.shift())
 
+        deque = Deque(5)
+        deque.append(1)
+        self.assertEqual(1, deque.shift())
+
 if __name__ == '__main__':
     unittest.main()
