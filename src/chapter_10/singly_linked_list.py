@@ -25,7 +25,7 @@ class SinglyLinkedList(object):
         if self.head is None:
             self.head = new
         else:
-            new.next, self.head = self.head, new.next
+            new.next, self.head = self.head, new
 
     def delete(self, key):
         prev = None

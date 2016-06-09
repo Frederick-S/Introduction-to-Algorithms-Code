@@ -9,13 +9,13 @@ class TestSinglyLinkedList(unittest.TestCase):
         singly_linked_list.insert(2)
         singly_linked_list.insert(3)
         self.assertEqual(None, singly_linked_list.search(4))
-        self.assertEqual(3, singly_linked_list.search(3).key)
-
-        singly_linked_list.delete(3)
-        self.assertEqual(None, singly_linked_list.search(3))
+        self.assertEqual(1, singly_linked_list.search(1).key)
 
         singly_linked_list.delete(1)
+        self.assertEqual(None, singly_linked_list.search(1))
+
         singly_linked_list.delete(2)
+        singly_linked_list.delete(3)
         self.assertTrue(singly_linked_list.is_empty())
 
 if __name__ == '__main__':
