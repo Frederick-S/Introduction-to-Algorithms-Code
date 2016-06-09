@@ -3,7 +3,7 @@ from src.chapter_10.doubly_linked_list import DoublyLinkedList
 
 
 class TestDoublyLinkedList(unittest.TestCase):
-    def doubly_linked_list(self):
+    def test_doubly_linked_list(self):
         doubly_linked_list = DoublyLinkedList()
         doubly_linked_list.insert(1)
         doubly_linked_list.insert(2)
