@@ -11,6 +11,12 @@ class SinglyLinkedList(object):
     def is_empty(self):
         return self.head is None
 
+    def remove_head(self):
+        if self.head is not None:
+            head, self.head = self.head, self.head.next
+
+            return head
+
     def search(self, key):
         node = self.head
 
