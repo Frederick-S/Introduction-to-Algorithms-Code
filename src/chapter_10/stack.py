@@ -2,6 +2,7 @@ class Stack(object):
     def __init__(self, n):
         self.top = -1
         self.size = n
+        self.count = 0
         self.elements = [0] * n
 
     def is_empty(self):
@@ -15,6 +16,7 @@ class Stack(object):
             raise Exception('Overflow')
 
         self.top += 1
+        self.count += 1
         self.elements[self.top] = x
 
     def pop(self):
@@ -22,5 +24,6 @@ class Stack(object):
             raise Exception('Underflow')
 
         self.top -= 1
+        self.count -= 1
 
         return self.elements[self.top + 1]
