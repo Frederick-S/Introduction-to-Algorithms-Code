@@ -18,5 +18,12 @@ class TestDoublyLinkedList(unittest.TestCase):
         doubly_linked_list.delete(3)
         self.assertTrue(doubly_linked_list.is_empty())
 
+        doubly_linked_list.insert(1)
+        doubly_linked_list.insert(2)
+        doubly_linked_list.insert(3)
+        doubly_linked_list.delete(2)
+        node = doubly_linked_list.search(3)
+        self.assertEqual(1, node.next.key)
+
 if __name__ == '__main__':
     unittest.main()
