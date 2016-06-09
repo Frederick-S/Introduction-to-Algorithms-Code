@@ -7,13 +7,27 @@ class SinglyLinkedNode(object):
 class SinglyLinkedList(object):
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def is_empty(self):
         return self.head is None
 
+    def append(self, key):
+        new = SinglyLinkedNode(key)
+
+        if self.head is None:
+            self.head = new
+            self.tail = new
+        else:
+            self.tail.next = new
+            self.tail = new
+
     def remove_head(self):
         if self.head is not None:
             head, self.head = self.head, self.head.next
+
+            if self.head is None:
+                self.tail = None
 
             return head
 
@@ -30,6 +44,7 @@ class SinglyLinkedList(object):
 
         if self.head is None:
             self.head = new
+            self.tail = new
         else:
             new.next, self.head = self.head, new
 
@@ -44,5 +59,9 @@ class SinglyLinkedList(object):
         if current is not None:
             if prev is None:
                 self.head = None
+                self.tail = None
             else:
                 prev.next = current.next
+
+                if prev.next is None:
+                    self.tail = prev
