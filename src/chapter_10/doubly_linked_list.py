@@ -37,7 +37,10 @@ class DoublyLinkedList(object):
             current = current.next
 
         if current is not None:
-            current.prev.next = current.next
+            if current.prev is not None:
+                current.prev.next = current.next
+            else:
+                self.head = None
 
             if current.next is not None:
                 current.next.prev = current.prev
