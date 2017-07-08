@@ -10,7 +10,7 @@ environment:
     - PYTHON: "C:\\Python36-x64"
 build: off
 install:
-  - "%PYTHON%\\python.exe -m pip install pep8"
+  - "%PYTHON%\\python.exe pip install pep8"
 before_test:
   - "%PYTHON%\\Scripts\\pep8.exe ."
 test_script:
