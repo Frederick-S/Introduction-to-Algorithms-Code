@@ -5,6 +5,7 @@ python:
   - 3.5
   - 3.6
 install:
+  - pip install codecov
   - pip install coveralls
   - pip install pep8
 script:
@@ -12,3 +13,4 @@ script:
   - coverage run --source=src setup.py test
 after_success:
   coveralls
+  codecov
