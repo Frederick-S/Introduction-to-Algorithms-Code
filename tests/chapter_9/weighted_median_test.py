@@ -20,7 +20,7 @@ def create_elements(values, weights):
 
     for i, value in enumerate(values):
         elements.append({
-            'value': values[i],
+            'value': value,
             'weight': weights[i]
         })
 
