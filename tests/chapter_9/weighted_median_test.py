@@ -1,5 +1,4 @@
 import unittest
-import random
 from src.chapter_9.weighted_median import weighted_median
 
 
@@ -19,7 +18,7 @@ class TestWeightedMedian(unittest.TestCase):
 def create_elements(values, weights):
     elements = []
 
-    for i in range(len(values)):
+    for i, value in enumerate(values):
         elements.append({
             'value': values[i],
             'weight': weights[i]

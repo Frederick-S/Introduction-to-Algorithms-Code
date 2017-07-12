@@ -2,8 +2,8 @@ def merge_sorted_lists(lists):
     sorted_list = []
     min_heap_elements = []
 
-    for i in range(len(lists)):
-        min_heap_elements.append(MinHeapElement(i, 1, lists[i][0]))
+    for i, value in enumerate(lists):
+        min_heap_elements.append(MinHeapElement(i, 1, value[0]))
 
     min_heap = MinHeap(min_heap_elements)
 

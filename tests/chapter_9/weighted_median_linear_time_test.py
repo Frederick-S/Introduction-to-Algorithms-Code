@@ -1,5 +1,4 @@
 import unittest
-import random
 from .weighted_median_test import create_elements
 from src.chapter_9.weighted_median_linear_time \
     import weighted_median_linear_time

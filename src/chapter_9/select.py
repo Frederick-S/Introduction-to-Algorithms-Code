@@ -4,7 +4,7 @@ k = 5
 def select(numbers, i):
     assert i <= len(numbers)
 
-    index, value = select_internal(numbers, 0, len(numbers) - 1, i)
+    _, value = select_internal(numbers, 0, len(numbers) - 1, i)
 
     return value
 

@@ -43,7 +43,7 @@ k = 5
 def select(elements, i):
     assert i <= len(elements)
 
-    index, value = select_internal(elements, 0, len(elements) - 1, i)
+    _, value = select_internal(elements, 0, len(elements) - 1, i)
 
     return value
 
