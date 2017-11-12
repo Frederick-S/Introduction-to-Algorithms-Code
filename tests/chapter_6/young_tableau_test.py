@@ -28,5 +28,6 @@ class TestYoungTableau(unittest.TestCase):
         self.assertTrue(young_tableau_find(matrix, 1))
         self.assertFalse(young_tableau_find(matrix, 20))
 
+
 if __name__ == '__main__':
     unittest.main()

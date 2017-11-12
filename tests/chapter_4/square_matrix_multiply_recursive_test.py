@@ -17,5 +17,6 @@ class TestSquareMatrixMultiplyRecursive(unittest.TestCase):
         self.assertSequenceEqual(
             c, square_matrix_multiply_recursive(a, b))
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -32,5 +32,6 @@ class TestSortingVariableLengthIntegers(unittest.TestCase):
             [2, 12, 120, 365, 781, 992, 12345],
             sorting_variable_length_integers(numbers))
 
+
 if __name__ == '__main__':
     unittest.main()

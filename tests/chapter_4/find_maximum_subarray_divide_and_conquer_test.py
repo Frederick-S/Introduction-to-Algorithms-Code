@@ -35,5 +35,6 @@ class TestMaxiumSubarrayDivideAndConquer(unittest.TestCase):
             find_maximum_subarray_divide_and_conquer(
                 numbers, 0, len(numbers) - 1))
 
+
 if __name__ == '__main__':
     unittest.main()

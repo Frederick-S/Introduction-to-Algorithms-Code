@@ -29,5 +29,6 @@ class TestQueue(unittest.TestCase):
         self.assertTrue(queue.is_empty())
         self.assertRaises(Exception, queue.dequeue)
 
+
 if __name__ == '__main__':
     unittest.main()

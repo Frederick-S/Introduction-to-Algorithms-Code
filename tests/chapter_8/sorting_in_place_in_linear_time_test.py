@@ -17,5 +17,6 @@ class TestSortingInPlaceInLinearTime(unittest.TestCase):
         sorting_in_place_in_linear_time(numbers)
         self.assertSequenceEqual([0, 0, 0, 0, 1, 1, 1, 1], numbers)
 
+
 if __name__ == '__main__':
     unittest.main()

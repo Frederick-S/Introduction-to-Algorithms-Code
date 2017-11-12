@@ -12,5 +12,6 @@ class TestHybridQuickSort(unittest.TestCase):
         hybrid_quick_sort(numbers, 50)
         self.assertSequenceEqual(numbers_sorted, numbers)
 
+
 if __name__ == '__main__':
     unittest.main()

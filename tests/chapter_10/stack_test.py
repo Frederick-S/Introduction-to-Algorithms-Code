@@ -19,5 +19,6 @@ class TestStack(unittest.TestCase):
         self.assertEqual(1, stack.pop())
         self.assertRaises(Exception, stack.pop)
 
+
 if __name__ == '__main__':
     unittest.main()

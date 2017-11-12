@@ -19,5 +19,6 @@ class TestILargestByOrderStatistic(unittest.TestCase):
         self.assertSequenceEqual(
             sorted(numbers)[889:], i_largest_by_order_statistic(numbers, 111))
 
+
 if __name__ == '__main__':
     unittest.main()

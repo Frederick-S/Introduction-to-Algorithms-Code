@@ -19,5 +19,6 @@ class TestSquareMatrixMultiply(unittest.TestCase):
         c = [[18, 14], [62, 66]]
         self.assertSequenceEqual(c, square_matrix_multiply(a, b))
 
+
 if __name__ == '__main__':
     unittest.main()

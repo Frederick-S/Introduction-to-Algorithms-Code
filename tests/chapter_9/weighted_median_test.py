@@ -26,5 +26,6 @@ def create_elements(values, weights):
 
     return elements
 
+
 if __name__ == '__main__':
     unittest.main()

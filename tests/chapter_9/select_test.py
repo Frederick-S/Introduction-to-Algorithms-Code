@@ -26,5 +26,6 @@ class TestSelect(unittest.TestCase):
         random.shuffle(numbers)
         self.assertEqual(999, select(numbers, 999))
 
+
 if __name__ == '__main__':
     unittest.main()

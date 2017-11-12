@@ -12,5 +12,6 @@ class TestMergeSortedLists(unittest.TestCase):
         self.assertSequenceEqual(
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], merge_sorted_lists(lists))
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -25,5 +25,6 @@ class TestStackOptimizedTailRecursiveQuickSort(unittest.TestCase):
         stack_optimized_tail_recursive_quick_sort(numbers)
         self.assertSequenceEqual([1, 2, 3, 4, 5, 6, 7, 8, 9], numbers)
 
+
 if __name__ == '__main__':
     unittest.main()

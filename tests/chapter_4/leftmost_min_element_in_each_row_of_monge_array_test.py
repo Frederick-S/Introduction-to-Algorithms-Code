@@ -24,5 +24,6 @@ class TestLeftmostMinElementInEachRowOfMongeArray(unittest.TestCase):
             [0, 2, 2, 2, 4, 4, 4],
             leftmost_min_element_in_each_row_of_monge_array(matrix))
 
+
 if __name__ == '__main__':
     unittest.main()

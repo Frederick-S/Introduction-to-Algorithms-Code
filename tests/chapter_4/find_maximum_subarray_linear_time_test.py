@@ -31,5 +31,6 @@ class TestMaxiumSubarrayLinearTime(unittest.TestCase):
             (3, 6, 6),
             find_maximum_subarray_linear_time(numbers, 0, len(numbers) - 1))
 
+
 if __name__ == '__main__':
     unittest.main()

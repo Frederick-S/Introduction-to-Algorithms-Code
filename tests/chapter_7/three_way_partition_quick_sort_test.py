@@ -29,5 +29,6 @@ class TestThreeWayPartitionQuickSort(unittest.TestCase):
         three_way_partition_quick_sort(numbers)
         self.assertSequenceEqual([4, 6, 8, 13, 13, 13, 19, 20, 21], numbers)
 
+
 if __name__ == '__main__':
     unittest.main()

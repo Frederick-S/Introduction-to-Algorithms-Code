@@ -37,5 +37,6 @@ class TestWeightedMedianLinearTime(unittest.TestCase):
         self.assertEqual(
             0.1, weighted_median_linear_time(elements).get('value'))
 
+
 if __name__ == '__main__':
     unittest.main()

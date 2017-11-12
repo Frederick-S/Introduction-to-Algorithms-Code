@@ -23,5 +23,6 @@ class TestSortingVariableLengthStrings(unittest.TestCase):
             ['a', 'abcedf', 'bcadefk', 'e', 'jlmk'],
             sorting_variable_length_strings(strings))
 
+
 if __name__ == '__main__':
     unittest.main()

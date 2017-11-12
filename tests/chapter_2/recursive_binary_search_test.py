@@ -15,5 +15,6 @@ class TestRecursiveBinarySearch(unittest.TestCase):
         self.assertEqual(True, recursive_binary_search(numbers, 4))
         self.assertEqual(False, recursive_binary_search(numbers, 5))
 
+
 if __name__ == '__main__':
     unittest.main()

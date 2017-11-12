@@ -20,5 +20,6 @@ class TestKSortedArray(unittest.TestCase):
         k_sorted_array(numbers, 2)
         self.assertSequenceEqual([31, 26, 41, 41, 59, 58], numbers)
 
+
 if __name__ == '__main__':
     unittest.main()

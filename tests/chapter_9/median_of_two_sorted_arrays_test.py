@@ -25,5 +25,6 @@ class TestMedianOfTwoSortedArrays(unittest.TestCase):
         y = [i for i in range(1, 101)]
         self.assertEqual(100, median_of_two_sorted_arrays(x, y))
 
+
 if __name__ == '__main__':
     unittest.main()

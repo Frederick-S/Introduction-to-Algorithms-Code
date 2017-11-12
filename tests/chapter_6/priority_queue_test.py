@@ -23,5 +23,6 @@ class TestPriorityQueue(unittest.TestCase):
         self.assertEqual(20, priority_queue.maximum())
         self.assertEqual(11, priority_queue.heap_size)
 
+
 if __name__ == '__main__':
     unittest.main()

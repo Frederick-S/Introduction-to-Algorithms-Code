@@ -17,5 +17,6 @@ class TestSquareMatrixMultiplyStrassenAlgorithm(unittest.TestCase):
         self.assertSequenceEqual(
             c, square_matrix_multiply_strassen_algorithm(a, b))
 
+
 if __name__ == '__main__':
     unittest.main()

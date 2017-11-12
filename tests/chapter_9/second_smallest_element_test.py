@@ -16,5 +16,6 @@ class TestSecondSmallestElement(unittest.TestCase):
         numbers = [31, 41, 59, 26, 41, 58]
         self.assertEqual(31, second_smallest_element(numbers))
 
+
 if __name__ == '__main__':
     unittest.main()

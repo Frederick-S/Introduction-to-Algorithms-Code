@@ -20,5 +20,6 @@ class TestBucketSort(unittest.TestCase):
             [0.13, 0.16, 0.20, 0.39, 0.53, 0.64, 0.71, 0.79, 0.89],
             bucket_sort(numbers))
 
+
 if __name__ == '__main__':
     unittest.main()

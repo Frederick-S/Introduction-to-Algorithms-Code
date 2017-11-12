@@ -16,5 +16,6 @@ class TestIntegerQuery(unittest.TestCase):
         integer_query = IntegerQuery([1, 2, 3, 4, 5, 6, 7, 8, 9])
         self.assertEqual(9, integer_query.query(1, 9))
 
+
 if __name__ == '__main__':
     unittest.main()

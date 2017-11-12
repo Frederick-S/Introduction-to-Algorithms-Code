@@ -36,5 +36,6 @@ class TestKClosest(unittest.TestCase):
             set([i for i in range(36, 66)]) == set(closet) or
             set([i for i in range(35, 65)]) == set(closet))
 
+
 if __name__ == '__main__':
     unittest.main()

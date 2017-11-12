@@ -25,5 +25,6 @@ class TestDoublyLinkedList(unittest.TestCase):
         node = doubly_linked_list.search(3)
         self.assertEqual(1, node.next.key)
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -20,5 +20,6 @@ class TestILargestByMaxPriorityQueue(unittest.TestCase):
             sorted(numbers)[889:],
             i_largest_by_max_priority_queue(numbers, 111))
 
+
 if __name__ == '__main__':
     unittest.main()

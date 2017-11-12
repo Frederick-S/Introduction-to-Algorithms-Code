@@ -19,5 +19,6 @@ class TestMinimumAndMaximum(unittest.TestCase):
         numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         self.assertSequenceEqual([1, 9], minimum_and_maximum(numbers))
 
+
 if __name__ == '__main__':
     unittest.main()

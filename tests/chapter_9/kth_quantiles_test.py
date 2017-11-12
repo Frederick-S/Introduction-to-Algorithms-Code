@@ -37,5 +37,6 @@ class TestKthQuantiles(unittest.TestCase):
         quantiles.sort()
         self.assertSequenceEqual([i for i in range(53, 1000, 53)], quantiles)
 
+
 if __name__ == '__main__':
     unittest.main()

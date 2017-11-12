@@ -23,5 +23,6 @@ class TestFuzzySortingOfIntervals(unittest.TestCase):
         self.assertSequenceEqual([0, 1], intervals[0])
         self.assertSequenceEqual([30, 31], intervals[9])
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -23,5 +23,6 @@ class TestDAryHeap(unittest.TestCase):
         self.assertEqual(20, d_ary_heap.maximum())
         self.assertEqual(11, d_ary_heap.heap_size)
 
+
 if __name__ == '__main__':
     unittest.main()
