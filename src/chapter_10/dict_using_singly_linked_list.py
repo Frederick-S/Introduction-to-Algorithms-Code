@@ -6,9 +6,9 @@ class DictUsingSinglyLinkedList(object):
         self.singly_linked_list = SinglyLinkedList()
 
     def insert(self, key, value):
-        value = self.search(key)
+        dict_value = self.search(key)
 
-        if value:
+        if dict_value:
             raise Exception('The specified key already exists')
         else:
             self.singly_linked_list.insert(key, value)
