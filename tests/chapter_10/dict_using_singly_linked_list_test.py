@@ -1,5 +1,6 @@
 import unittest
-from src.chapter_10.dict_using_singly_linked_list import DictUsingSinglyLinkedList
+from src.chapter_10.dict_using_singly_linked_list \
+    import DictUsingSinglyLinkedList
 
 
 class TestDictUsingSinglyLinkedList(unittest.TestCase):
