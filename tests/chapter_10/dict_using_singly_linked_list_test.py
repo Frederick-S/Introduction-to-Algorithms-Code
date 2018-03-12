@@ -13,7 +13,7 @@ class TestDictUsingSinglyLinkedList(unittest.TestCase):
         dict_using_singly_linked_list.insert(2, 2)
         with self.assertRaises(Exception):
             dict_using_singly_linked_list.insert(2, 2)
-        
+
         dict_using_singly_linked_list.delete(2)
         with self.assertRaises(Exception):
             dict_using_singly_linked_list.delete(2)
