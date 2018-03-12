@@ -1,6 +1,7 @@
 class SinglyLinkedNode(object):
-    def __init__(self, key):
+    def __init__(self, key, value=None):
         self.key = key
+        self.value = value
         self.next = None
 
 
@@ -12,8 +13,8 @@ class SinglyLinkedList(object):
     def is_empty(self):
         return self.head is None
 
-    def append(self, key):
-        new = SinglyLinkedNode(key)
+    def append(self, key, value=None):
+        new = SinglyLinkedNode(key, value)
 
         if self.head is None:
             self.head = new
@@ -39,8 +40,8 @@ class SinglyLinkedList(object):
 
         return node
 
-    def insert(self, key):
-        new = SinglyLinkedNode(key)
+    def insert(self, key, value=None):
+        new = SinglyLinkedNode(key, value)
 
         if self.head is None:
             self.head = new
