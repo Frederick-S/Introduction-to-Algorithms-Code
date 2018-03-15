@@ -15,9 +15,11 @@ class SinglyLinkedCircularList(object):
         if self.head is None:
             self.head = new
             self.tail = new
+            self.tail.next = self.head
         else:
             self.tail.next = new
             self.tail = new
+            self.tail.next = self.head
 
     def remove_head(self):
         if self.head is not None:
@@ -25,16 +27,18 @@ class SinglyLinkedCircularList(object):
 
             if self.head is None:
                 self.tail = None
+            else:
+                self.tail.next = self.head
 
             return head
 
     def search(self, key):
         node = self.head
 
-        while node is not None and node.key != key:
+        while node is not None and node.next != self.head and node.key != key:
             node = node.next
 
-        return node
+        return node if node is not None and node.key == key else None
 
     def insert(self, key, value=None):
         new = SinglyLinkedNode(key, value)
@@ -42,8 +46,10 @@ class SinglyLinkedCircularList(object):
         if self.head is None:
             self.head = new
             self.tail = new
+            self.tail.next = self.head
         else:
             new.next, self.head = self.head, new
+            self.tail.next = self.head
 
     def delete(self, key):
         prev = None
@@ -62,3 +68,4 @@ class SinglyLinkedCircularList(object):
 
                 if prev.next is None:
                     self.tail = prev
+                    self.tail.next = self.head
