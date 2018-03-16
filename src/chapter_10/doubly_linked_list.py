@@ -36,11 +36,13 @@ class DoublyLinkedList(object):
         while current is not None and current.key != key:
             current = current.next
 
-        if current is not None:
-            if current.prev is not None:
-                current.prev.next = current.next
-            else:
-                self.head = None
+        if current is None:
+            raise Exception('The specified key does not exist')
 
-            if current.next is not None:
-                current.next.prev = current.prev
+        if current.prev is not None:
+            current.prev.next = current.next
+        else:
+            self.head = None
+
+        if current.next is not None:
+            current.next.prev = current.prev

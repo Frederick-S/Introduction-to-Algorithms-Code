@@ -18,6 +18,9 @@ class TestSinglyLinkedList(unittest.TestCase):
         singly_linked_list.delete(3)
         self.assertTrue(singly_linked_list.is_empty())
 
+        with self.assertRaises(Exception):
+            singly_linked_list.delete(6)
+
 
 if __name__ == '__main__':
     unittest.main()

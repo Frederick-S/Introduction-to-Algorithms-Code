@@ -55,17 +55,20 @@ class SinglyLinkedCircularList(object):
         prev = None
         current = self.head
 
-        while current is not None and current.key != key:
+        while (current is not None and current.next != self.head and
+               current.key != key):
             prev = current
             current = current.next
 
-        if current is not None:
-            if prev is None:
-                self.head = None
-                self.tail = None
-            else:
-                prev.next = current.next
+        if current == self.tail and current.key != key:
+            raise Exception('The specified key does not exist')
 
-                if prev.next is None:
-                    self.tail = prev
-                    self.tail.next = self.head
+        if prev is None:
+            self.head = None
+            self.tail = None
+        else:
+            prev.next = current.next
+
+            if prev.next is None:
+                self.tail = prev
+                self.tail.next = self.head

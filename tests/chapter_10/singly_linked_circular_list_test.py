@@ -29,6 +29,9 @@ class TestSinglyLinkedCircularList(unittest.TestCase):
         self.assertEqual(5, singly_linked_circular_list.head.key)
         self.assertEqual(5, singly_linked_circular_list.tail.key)
 
+        with self.assertRaises(Exception):
+            singly_linked_circular_list.delete(6)
+
 
 if __name__ == '__main__':
     unittest.main()

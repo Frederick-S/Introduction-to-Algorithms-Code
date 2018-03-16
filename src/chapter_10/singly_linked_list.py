@@ -57,12 +57,14 @@ class SinglyLinkedList(object):
             prev = current
             current = current.next
 
-        if current is not None:
-            if prev is None:
-                self.head = None
-                self.tail = None
-            else:
-                prev.next = current.next
+        if current is None:
+            raise Exception('The specified key does not exist')
 
-                if prev.next is None:
-                    self.tail = prev
+        if prev is None:
+            self.head = None
+            self.tail = None
+        else:
+            prev.next = current.next
+
+            if prev.next is None:
+                self.tail = prev
