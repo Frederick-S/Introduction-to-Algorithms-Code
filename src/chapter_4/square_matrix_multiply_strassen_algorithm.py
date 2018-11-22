@@ -1,20 +1,20 @@
 def square_matrix_multiply_strassen_algorithm(a, b):
     n = len(a)
-    c = [[0] * n for i in range(n)]
+    c = [[0] * n for _ in range(n)]
 
     if n == 1:
         c[0][0] = a[0][0] * b[0][0]
     else:
         half = n // 2
 
-        a11 = [[0] * half for i in range(half)]
-        a12 = [[0] * half for i in range(half)]
-        a21 = [[0] * half for i in range(half)]
-        a22 = [[0] * half for i in range(half)]
-        b11 = [[0] * half for i in range(half)]
-        b12 = [[0] * half for i in range(half)]
-        b21 = [[0] * half for i in range(half)]
-        b22 = [[0] * half for i in range(half)]
+        a11 = [[0] * half for _ in range(half)]
+        a12 = [[0] * half for _ in range(half)]
+        a21 = [[0] * half for _ in range(half)]
+        a22 = [[0] * half for _ in range(half)]
+        b11 = [[0] * half for _ in range(half)]
+        b12 = [[0] * half for _ in range(half)]
+        b21 = [[0] * half for _ in range(half)]
+        b22 = [[0] * half for _ in range(half)]
 
         for i in range(half):
             for j in range(half):
@@ -63,7 +63,7 @@ def square_matrix_multiply_strassen_algorithm(a, b):
 
 def add(a, b):
     n = len(a)
-    c = [[0] * n for i in range(n)]
+    c = [[0] * n for _ in range(n)]
 
     for i in range(n):
         for j in range(n):
@@ -74,7 +74,7 @@ def add(a, b):
 
 def subtract(a, b):
     n = len(a)
-    c = [[0] * n for i in range(n)]
+    c = [[0] * n for _ in range(n)]
 
     for i in range(n):
         for j in range(n):

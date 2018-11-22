@@ -13,4 +13,4 @@ def find_maximum_subarray_brute_force(numbers, low, high):
                 max_sum = current_sum
                 start, end = i, j
 
-    return (start, end, max_sum)
+    return start, end, max_sum

@@ -3,7 +3,7 @@ from src.chapter_4.find_maximum_subarray_brute_force \
     import find_maximum_subarray_brute_force
 
 
-class TestMaxiumSubarrayBruteForce(unittest.TestCase):
+class TestMaximumSubarrayBruteForce(unittest.TestCase):
     def test_maximum_subarray_brute_force(self):
         numbers = []
         self.assertSequenceEqual(

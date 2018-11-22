@@ -1,6 +1,6 @@
 def square_matrix_multiply(a, b):
     n = len(a)
-    c = [[0] * n for i in range(n)]
+    c = [[0] * n for _ in range(n)]
 
     for i in range(n):
         for j in range(n):

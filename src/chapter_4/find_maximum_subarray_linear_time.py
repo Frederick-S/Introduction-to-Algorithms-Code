@@ -1,6 +1,6 @@
 def find_maximum_subarray_linear_time(numbers, low, high):
     if len(numbers) == 0:
-        return (-1, -1, -float('inf'))
+        return -1, -1, -float('inf')
 
     start = -1
     max_sum_start = -1
@@ -20,4 +20,4 @@ def find_maximum_subarray_linear_time(numbers, low, high):
             max_sum_start = start
             max_sum_end = i
 
-    return (max_sum_start, max_sum_end, max_sum_so_far)
+    return max_sum_start, max_sum_end, max_sum_so_far

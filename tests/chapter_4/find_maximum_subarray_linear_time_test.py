@@ -3,7 +3,7 @@ from src.chapter_4.find_maximum_subarray_linear_time \
     import find_maximum_subarray_linear_time
 
 
-class TestMaxiumSubarrayLinearTime(unittest.TestCase):
+class TestMaximumSubarrayLinearTime(unittest.TestCase):
     def test_maximum_subarray_linear_time(self):
         numbers = []
         self.assertSequenceEqual(

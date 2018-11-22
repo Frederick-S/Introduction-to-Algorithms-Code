@@ -5,7 +5,7 @@ from ..chapter_2.insertion_sort import insertion_sort
 def bucket_sort(numbers):
     length = len(numbers)
     result = []
-    b = [[] for i in range(length)]
+    b = [[] for _ in range(length)]
 
     for i in range(length):
         j = math.floor(length * numbers[i])

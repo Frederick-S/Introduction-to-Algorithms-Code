@@ -21,7 +21,7 @@ class PriorityQueue(object):
 
     def delete(self, i):
         assert not self.is_empty()
-        assert i >= 0 and i < self.heap_size
+        assert 0 <= i < self.heap_size
 
         self.elements[i] = self.elements[self.heap_size - 1]
         self.heap_size -= 1
@@ -46,7 +46,7 @@ class PriorityQueue(object):
 
     def increase_key(self, i, key):
         assert not self.is_empty()
-        assert i >= 0 and i < self.heap_size
+        assert 0 <= i < self.heap_size
         assert key >= self.elements[i]
 
         while i > 0 and self.elements[(i - 1) // 2] < key:

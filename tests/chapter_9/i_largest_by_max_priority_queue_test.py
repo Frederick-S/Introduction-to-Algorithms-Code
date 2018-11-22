@@ -15,7 +15,7 @@ class TestILargestByMaxPriorityQueue(unittest.TestCase):
             [i for i in range(971, 1001)],
             i_largest_by_max_priority_queue(numbers, 30))
 
-        numbers = [random.randint(1, 1000) for i in range(1000)]
+        numbers = [random.randint(1, 1000) for _ in range(1000)]
         self.assertSequenceEqual(
             sorted(numbers)[889:],
             i_largest_by_max_priority_queue(numbers, 111))

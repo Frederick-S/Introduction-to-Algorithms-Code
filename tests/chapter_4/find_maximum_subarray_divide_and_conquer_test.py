@@ -3,7 +3,7 @@ from src.chapter_4.find_maximum_subarray_divide_and_conquer \
     import find_maximum_subarray_divide_and_conquer
 
 
-class TestMaxiumSubarrayDivideAndConquer(unittest.TestCase):
+class TestMaximumSubarrayDivideAndConquer(unittest.TestCase):
     def test_maximum_subarray_divide_and_conquer(self):
         numbers = []
         self.assertSequenceEqual(

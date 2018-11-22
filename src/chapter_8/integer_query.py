@@ -2,6 +2,7 @@ class IntegerQuery(object):
     def __init__(self, numbers):
         assert len(numbers) > 0
 
+        self.c = []
         self.preprocess(numbers)
 
     def preprocess(self, numbers):
