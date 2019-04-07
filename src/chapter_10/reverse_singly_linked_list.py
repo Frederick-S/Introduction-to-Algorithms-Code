@@ -2,7 +2,7 @@ def reverse_singly_linked_list(singly_linked_list):
     prev = singly_linked_list.head
     current = prev.next if prev is not None else None
 
-    while prev is not None and current is not None:
+    while current is not None:
         next = current.next
         current.next, prev = prev, current
         current = next
