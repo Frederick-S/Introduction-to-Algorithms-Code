@@ -11,7 +11,7 @@ class OnePointerDoublyLinkedList(object):
     def __init__(self):
         self.head = None
         self.tail = None
-        self.nodes = []
+        self.nodes = {}
 
     def search(self, key):
         node = self.head
@@ -36,7 +36,7 @@ class OnePointerDoublyLinkedList(object):
             self.head = new
 
         # Keep reference of each node
-        self.nodes.append(new)
+        self.nodes[id(new)] = new
 
     def delete(self, key):
         pass
