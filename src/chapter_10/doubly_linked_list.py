@@ -31,18 +31,15 @@ class DoublyLinkedList(object):
             self.head = new
 
     def delete(self, key):
-        current = self.head
+        node = self.search(key)
 
-        while current is not None and current.key != key:
-            current = current.next
-
-        if current is None:
+        if node is None:
             raise Exception('The specified key does not exist')
 
-        if current.prev is not None:
-            current.prev.next = current.next
+        if node.prev is not None:
+            node.prev.next = node.next
         else:
             self.head = None
 
-        if current.next is not None:
-            current.next.prev = current.prev
+        if node.next is not None:
+            node.next.prev = node.prev
