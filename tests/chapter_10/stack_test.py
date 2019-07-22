@@ -10,7 +10,8 @@ class TestStack(unittest.TestCase):
         stack.push(3)
         stack.push(4)
         stack.push(5)
-        self.assertRaises(Exception, stack.push)
+        with self.assertRaises(Exception):
+            stack.push(6)
 
         self.assertEqual(5, stack.pop())
         self.assertEqual(4, stack.pop())
