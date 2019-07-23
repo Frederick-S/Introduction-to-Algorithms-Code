@@ -22,13 +22,18 @@ class SinglyLinkedCircularList(object):
             self.tail.next = self.head
 
     def remove_head(self):
-        if self.head is not None:
-            head, self.head = self.head, self.head.next
+        if self.is_empty():
+            raise Exception("List is empty")
+        elif self.head == self.tail:
+            head = self.head
 
-            if self.head is None:
-                self.tail = None
-            else:
-                self.tail.next = self.head
+            self.head = None
+            self.tail = None
+
+            return head
+        else:
+            head, self.head = self.head, self.head.next
+            self.tail.next = self.head
 
             return head
 
