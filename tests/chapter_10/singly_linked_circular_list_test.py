@@ -34,9 +34,12 @@ class TestSinglyLinkedCircularList(unittest.TestCase):
         singly_linked_circular_list.delete(5)
         self.assertEqual(None, singly_linked_circular_list.head)
         self.assertEqual(None, singly_linked_circular_list.tail)
-
         with self.assertRaises(Exception):
             singly_linked_circular_list.delete(6)
+
+        singly_linked_circular_list.insert(1)
+        with self.assertRaises(Exception):
+            singly_linked_circular_list.delete(2)
 
 
 if __name__ == '__main__':

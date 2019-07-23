@@ -57,6 +57,9 @@ class SinglyLinkedCircularList(object):
             self.tail.next = self.head
 
     def delete(self, key):
+        if self.is_empty():
+            raise Exception("List is empty")
+
         prev = None
         current = self.head
 
