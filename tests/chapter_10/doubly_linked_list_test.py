@@ -25,6 +25,9 @@ class TestDoublyLinkedList(unittest.TestCase):
         node = doubly_linked_list.search(3)
         self.assertEqual(1, node.next.key)
 
+        doubly_linked_list.delete(3)
+        self.assertEqual(1, doubly_linked_list.head.key)
+
         with self.assertRaises(Exception):
             doubly_linked_list.delete(6)
 
