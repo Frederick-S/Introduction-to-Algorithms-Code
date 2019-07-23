@@ -36,10 +36,13 @@ class DoublyLinkedList(object):
         if node is None:
             raise Exception('The specified key does not exist')
 
-        if node.prev is not None:
-            node.prev.next = node.next
-        else:
-            self.head = None
+        if node == self.head:
+            self.head = node.next
 
-        if node.next is not None:
-            node.next.prev = node.prev
+            if node.next is not None:
+                node.next.prev = None
+        else:
+            node.prev.next = node.next
+
+            if node.next is not None:
+                node.next.prev = node.prev
