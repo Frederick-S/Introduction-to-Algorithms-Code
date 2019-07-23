@@ -16,8 +16,8 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(None, singly_linked_list.search(3))
         self.assertEqual(1, singly_linked_list.tail.key)
 
-        singly_linked_list.delete(2)
         singly_linked_list.delete(1)
+        singly_linked_list.delete(2)
         self.assertTrue(singly_linked_list.is_empty())
 
         with self.assertRaises(Exception):
