@@ -20,8 +20,10 @@ class TestOnePointerDoublyLinkedList(unittest.TestCase):
         with self.assertRaises(Exception):
             one_pointer_doubly_linked_list.delete(6)
 
-        one_pointer_doubly_linked_list.delete(1)
+        one_pointer_doubly_linked_list.insert(3)
         one_pointer_doubly_linked_list.delete(2)
+        one_pointer_doubly_linked_list.delete(1)
+        one_pointer_doubly_linked_list.delete(3)
         self.assertEqual(None, one_pointer_doubly_linked_list.head)
         self.assertEqual(None, one_pointer_doubly_linked_list.tail)
         with self.assertRaises(Exception):
