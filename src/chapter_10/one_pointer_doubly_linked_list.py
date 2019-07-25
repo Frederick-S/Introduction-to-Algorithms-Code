@@ -57,6 +57,9 @@ class OnePointerDoublyLinkedList(object):
             node = ctypes.cast(node.np ^ prev_pointer, ctypes.py_object).value
             prev_pointer = new_prev_pointer
 
+        if node is None:
+            raise Exception('The specified key does not exist')
+
         if node == self.head:
             if self.head == self.tail:
                 self.head = None

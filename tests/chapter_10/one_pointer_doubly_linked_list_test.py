@@ -19,7 +19,9 @@ class TestOnePointerDoublyLinkedList(unittest.TestCase):
         self.assertEqual(2, one_pointer_doubly_linked_list.head.key)
 
         one_pointer_doubly_linked_list.delete(1)
-        self.assertEqual(2, one_pointer_doubly_linked_list.tail.key)
+        one_pointer_doubly_linked_list.delete(2)
+        self.assertEqual(None, one_pointer_doubly_linked_list.head)
+        self.assertEqual(None, one_pointer_doubly_linked_list.tail)
         with self.assertRaises(Exception):
             one_pointer_doubly_linked_list.delete(6)
 
