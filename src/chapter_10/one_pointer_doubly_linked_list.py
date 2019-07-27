@@ -76,5 +76,6 @@ class OnePointerDoublyLinkedList(object):
             next.np = (next.np ^ id(node)) ^ prev_pointer
             prev_node.np = (prev_node.np ^ id(node)) ^ id(next)
 
-    def reverse(self, key):
-        pass
+    def reverse(self):
+        # self.head.np, self.tail.np = self.tail.np, self.head.np
+        self.head, self.tail = self.tail, self.head
